@@ -1,76 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <style type="text/css">
+        /*html{
+           font-size: 100px;/!*100px  = 1rem 为了方便计算，设定了一个标准的值*!/
+        }*/
+      /*  @media all and (min-device-width: 320px) {
+            html{
+               font-size: 50px;
+            }
+        }
+        @media all and (min-device-width: 375px) {
+            html{
+                font-size: 58.59375px;
+            }
+        }
+        @media all and (min-device-width: 414px) {
+            html{
+                font-size: 64.6875px;
+            }
+        }
+        @media all and (min-device-width: 480px) {
+            html{
+                font-size: 75px;
+            }
+        }
+        @media all and (min-device-width: 640px) {
+            html{
+                font-size: 100px;
+            }
+        }
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+*/
+        #div1{
+            width: 0.86rem;
+            height: 0.86rem;
+            background: red;
+            font-size: 0.6rem;
+        }
 
-    <title>Resume by caihuahengyi</title>
-  </head>
+        /*设计稿宽度/设备的宽度 = 100/设备的根元素字体大小
+        假设设备宽度是375 , 640/375 = 100/x(375宽度的设备的根元素字体大小)
+        x = 376/640*100
+        */
+    </style>
+    <script>
+        var desW = 640;
+        var winW = document.documentElement.clientWidth;
+        var desWfontSize = 100;//假设设计稿宽度的设备上，根元素字体大小是100px;
+        /*设备缩小多少倍，这个设备的根元素字体大小就缩小多少倍*/
+        //这个设备的根元素字体大小
+        //desW/winW = 100/fs(设备根元素字体大小)
+        document.documentElement.style.fontSize = winW/desW*100+"px";
+    </script>
+</head>
+<body>
+<div id="div1"></div>
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Resume</h1>
-        <h2>我的移动端H5交互性简历，欢迎各位前来探访！</h2>
-        <a href="https://github.com/caihuahengyi/resume" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a id="---welcome-to-github-pages" class="anchor" href="#---welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>## &gt; ### Welcome to GitHub Pages.</h1>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/caihuahengyi/resume/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/caihuahengyi/resume/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/caihuahengyi/resume"></a> is maintained by <a href="https://github.com/caihuahengyi">caihuahengyi</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
+<!--
+移动适配：页面在不同屏幕尺寸的移动设备上，显示的效果和设计稿是一样
+说白了，制作一套页面，在不同尺寸的设备上，页面的间隙，留白，图片大小等发生变化，但是比例和设计稿是一样的
+rem相对于根元素的字体大小，根据不同的设备，更改根元素的字体大小就行
+-->
+</body>
 </html>
